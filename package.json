@@ -1,0 +1,26 @@
+{
+    "name": "betterflashcards",
+    "description": "⚙️ A Logseq plugin that replaces the app’s built‑in, limited flashcards functionality",
+    "version": "0.0.1",
+    "type": "module",
+    "main": "dist/index.html",
+    "author": "Viktor Kratiuk",
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "tsc -w & vite build --mode=dev --watch"
+    },
+    "logseq": {
+        "title": "Better Flashcards",
+        "id": "betterflashcards",
+        "icon": "resources/logo.png"
+    },
+    "dependencies": {
+        "@logseq/libs": "^0.0.15"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.4",
+        "vite": "^5.4.0",
+        "vite-plugin-logseq": "^1.1.2"
+    },
+    "packageManager": "pnpm@9.7.1"
+}
