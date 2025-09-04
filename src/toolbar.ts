@@ -1,4 +1,4 @@
-import { iconSvg } from "./constants";
+import { iconSvg, buildModalTemplate, MODAL_STYLE } from "./constants";
 import { indexFlashcardPages } from "./services/flashcards";
 
 import { en } from "./i18n/en";
@@ -14,8 +14,21 @@ export function registerToolbar(getIndexedPages: () => string[]): void {
                 logseq.UI.showMsg(en.noCardsFound, "warning");
                 return;
             }
-            const list = indexedPages.map((p) => `• ${p}`).join("\n");
-            logseq.UI.showMsg(`${en.pagesWithCardsTitle}\n${list}`, "info", { timeout: 8000 });
+            const items = indexedPages
+                .map((page) => `<li class="bf-list-item">${page}</li>`)
+                .join("");
+
+            const template = buildModalTemplate(en.pagesWithCardsTitle, items);
+
+            logseq.provideStyle({
+                key: "betterflashcards-modal-style",
+                style: MODAL_STYLE,
+            });
+
+            logseq.provideUI({ key: "betterflashcards-modal", reset: true, template });
+        },
+        closeFlashcardsModal() {
+            logseq.provideUI({ key: "betterflashcards-modal", reset: true, template: "" });
         },
     });
 

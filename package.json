@@ -1,7 +1,7 @@
 {
     "name": "betterflashcards",
     "description": "⚙️ A Logseq plugin that replaces the app’s built‑in, limited flashcards functionality",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "module",
     "main": "dist/index.html",
     "author": "Viktor Kratiuk",
