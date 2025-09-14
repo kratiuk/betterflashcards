@@ -1,3 +1,5 @@
+`📝 The user has decided not to develop/maintain this extension anymore, as they no longer use Logseq due to its relatively immature functionality (in their opinion, Obsidian combined with good Firewall rules remains relatively private, while offering more functionality and a better overall experience)`
+
 # Better Flashcards (Logseq Plugin) ✨
 
 <p align="center">
@@ -14,4 +16,4 @@
 3. Open Logseq → Plugins → Load unpacked plugin → select the cloned folder 📂
 
 ---
-Made with 😡 by [Viktor Kratiuk](https://github.com/viktorkratiuk)
+Made with 😡 by [Viktor Kratiuk](https://github.com/kratiuk)
